@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LunF4r0qx5FMKc70m9Xt6+W98JIELltjH2GhOhnavYT8Ux5/bvYIsI8Bd6s3H41bcsSeCq/5ukSQiw15GmXL2g==",
+  "success": true,
+  "projectFilePath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bayez\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\bayez\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

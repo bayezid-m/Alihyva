@@ -1,0 +1,12 @@
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\bin\Debug\net7.0\WebApi.Domain.deps.json
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\bin\Debug\net7.0\WebApi.Domain.dll
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\bin\Debug\net7.0\WebApi.Domain.pdb
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.csproj.AssemblyReference.cache
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.AssemblyInfoInputs.cache
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.AssemblyInfo.cs
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.csproj.CoreCompileInputs.cache
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.dll
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\refint\WebApi.Domain.dll
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\WebApi.Domain.pdb
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Domain\obj\Debug\net7.0\ref\WebApi.Domain.dll

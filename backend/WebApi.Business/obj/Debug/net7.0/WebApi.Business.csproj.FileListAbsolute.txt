@@ -1,0 +1,15 @@
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.csproj.AssemblyReference.cache
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.AssemblyInfoInputs.cache
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.AssemblyInfo.cs
+E:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.csproj.CoreCompileInputs.cache
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\bin\Debug\net7.0\WebApi.Business.deps.json
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\bin\Debug\net7.0\WebApi.Business.dll
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\bin\Debug\net7.0\WebApi.Business.pdb
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\bin\Debug\net7.0\WebApi.Domain.dll
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\bin\Debug\net7.0\WebApi.Domain.pdb
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.csproj.CopyComplete
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.dll
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\refint\WebApi.Business.dll
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\WebApi.Business.pdb
+e:\Integrify\Backend\fs15_Fullstack\backend\WebApi.Business\obj\Debug\net7.0\ref\WebApi.Business.dll
