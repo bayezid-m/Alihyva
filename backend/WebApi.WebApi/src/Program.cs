@@ -1,7 +1,14 @@
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
+using WebApi.Business.src.Abstractions;
+using WebApi.Business.src.Implementations;
+using WebApi.Business.src.Shared;
+using WebApi.Domain.src.Abstractions;
+using WebApi.WebApi.src.Database;
+using WebApi.WebApi.src.RepoImplementations;
 
 internal class Program
 {
@@ -9,6 +16,17 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        //automapper dependency injections
+        builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+        //Database context
+        builder.Services.AddDbContext<DatabaseContext>();
+
+        //Service DI
+        builder.Services
+        .AddScoped<IUserRepo, UserRepo>()
+        .AddScoped<IUserService, UserService>()
+        .AddScoped<IAuthService, AuthService>();
         // Add services to the container.
 
         builder.Services.AddControllers();
@@ -16,7 +34,8 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(options =>
         {
-            options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme{
+            options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+            {
                 Description = "Bearer token authentication",
                 Name = "Authentication",
                 In = ParameterLocation.Header
@@ -34,11 +53,13 @@ internal class Program
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {
-            options.TokenValidationParameters = new TokenValidationParameters{
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
                 ValidateIssuer = true,
                 ValidIssuer = "fullstack-backend",
-                IssuerSigningKey = new JsonWebKey("my-secrete-key") ,
-                ValidateIssuerSigningKey = true
+                ValidateAudience = false,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("security-key-is-here-forbackendserver")),
+                ValidateIssuerSigningKey = true,
             };
         });
 

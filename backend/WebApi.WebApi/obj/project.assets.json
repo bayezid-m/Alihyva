@@ -18,6 +18,19 @@
           }
         }
       },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[12.0.1]",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "EFCore.NamingConventions/7.0.2": {
         "type": "package",
         "dependencies": {
@@ -3404,6 +3417,20 @@
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
         "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "EFCore.NamingConventions/7.0.2": {
@@ -9520,6 +9547,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "EFCore.NamingConventions >= 7.0.2",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.10",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
@@ -9538,11 +9566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
+      "projectUniqueName": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
       "projectName": "WebApi.WebApi",
-      "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
+      "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
       "packagesPath": "C:\\Users\\bayez\\.nuget\\packages\\",
-      "outputPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\obj\\",
+      "outputPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bayez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -9558,8 +9586,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {
-              "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj"
+            "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {
+              "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj"
             }
           }
         }
@@ -9574,6 +9602,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
           "EFCore.NamingConventions": {
             "target": "Package",
             "version": "[7.0.2, )"

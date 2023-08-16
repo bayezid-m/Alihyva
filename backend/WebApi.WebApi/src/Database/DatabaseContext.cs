@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 using WebApi.Domain.src.Entities;
@@ -22,11 +18,24 @@ namespace WebApi.WebApi.src.Database
         {
             _config = config;
         }
+        static DatabaseContext()
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new NpgsqlDataSourceBuilder(_config.GetConnectionString("Default"));
+            builder.MapEnum<Role>();
+            optionsBuilder.AddInterceptors(new TimeStampIntercepter());
             optionsBuilder.UseNpgsql(builder.Build()).UseSnakeCaseNamingConvention();
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.HasPostgresEnum<Role>();
+            modelBuilder.Entity<OrderProduct>().HasKey("OrderId", "ProductId");
+            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
         }
     }
 }

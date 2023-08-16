@@ -15,13 +15,14 @@ namespace WebApi.Controller.src.Controllers
           }
 
           [HttpGet]
-          public async Task<ActionResult<IEnumerable<TReadDto>>> GetAll([FromQuery] QueryOptions queryOptions)
+          public virtual async Task<ActionResult<IEnumerable<TReadDto>>> GetAll([FromQuery] QueryOptions queryOptions)
           {
-            return Ok(await _baseService.GetAll(queryOptions));
+            var result =(await _baseService.GetAll(queryOptions)).ToArray();
+            return Ok(result);
           }
 
-          [HttpGet("{id}")]
-          public async Task<ActionResult<TReadDto>> GetOneById([FromRoute] string id)
+          [HttpGet("{id:Guid}")]
+          public virtual async Task<ActionResult<TReadDto>> GetOneById([FromRoute] Guid id)
           {
             return Ok(await _baseService.GetOneById(id));
           }
@@ -30,18 +31,18 @@ namespace WebApi.Controller.src.Controllers
           public async Task<ActionResult<TReadDto>> CreateOne([FromBody] TCreateDto dto)
           {
             var createdObject = await _baseService.CreateOne(dto);
-            return CreatedAtAction("Created", createdObject);
+            return CreatedAtAction(nameof(CreateOne), createdObject);
           }
 
-          [HttpPatch("{id}")]
-          public async Task<ActionResult<TReadDto>> UpdateOneById([FromRoute] string id, [FromBody] TUpdateDto update)
+          [HttpPatch("{id:Guid}")]
+          public async Task<ActionResult<TReadDto>> UpdateOneById([FromRoute] Guid id, [FromBody] TUpdateDto update)
           {
             var updatedObject = _baseService.UpdateOneById(id, update);
             return Ok(updatedObject);
           }
 
-          [HttpDelete("{id}")]
-          public async Task<ActionResult<bool>> DeleteOneById([FromRoute] string id)
+          [HttpDelete("{id:Guid}")]
+          public async Task<ActionResult<bool>> DeleteOneById([FromRoute] Guid id)
           {
             return StatusCode(204, await _baseService.DeleteOneById(id));
           }

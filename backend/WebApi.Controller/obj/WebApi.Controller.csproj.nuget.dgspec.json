@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {}
+    "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {}
   },
   "projects": {
-    "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj": {
+    "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj",
+        "projectUniqueName": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj",
         "projectName": "WebApi.Business",
-        "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj",
+        "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj",
         "packagesPath": "C:\\Users\\bayez\\.nuget\\packages\\",
-        "outputPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\obj\\",
+        "outputPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bayez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
-                "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
+              "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
+                "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {
+    "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj",
+        "projectUniqueName": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj",
         "projectName": "WebApi.Controller",
-        "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj",
+        "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\WebApi.Controller.csproj",
         "packagesPath": "C:\\Users\\bayez\\.nuget\\packages\\",
-        "outputPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\obj\\",
+        "outputPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Controller\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bayez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -93,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj": {
-                "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj"
+              "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj": {
+                "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
+    "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
+        "projectUniqueName": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
         "projectName": "WebApi.Domain",
-        "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
+        "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
         "packagesPath": "C:\\Users\\bayez\\.nuget\\packages\\",
-        "outputPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\obj\\",
+        "outputPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bayez\\AppData\\Roaming\\NuGet\\NuGet.Config"
