@@ -9,5 +9,6 @@ namespace WebApi.Business.src.Abstractions
     public interface IAuthService
     {
         Task<string> VerifyCredentials(UserCredentialsDto credentials);
+        //Task<string> GetProdile(UserCredentialsDto credentials);
     }
 }

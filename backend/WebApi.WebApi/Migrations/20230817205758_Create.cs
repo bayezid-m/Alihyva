@@ -7,7 +7,7 @@ using WebApi.Domain.src.Entities;
 namespace WebApi.WebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class create : Migration
+    public partial class Create : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +24,7 @@ namespace WebApi.WebApi.Migrations
                     description = table.Column<string>(type: "text", nullable: false),
                     inventory = table.Column<int>(type: "integer", nullable: false),
                     price = table.Column<float>(type: "real", nullable: false),
+                    url = table.Column<string[]>(type: "text[]", nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
@@ -53,31 +54,11 @@ namespace WebApi.WebApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "images",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    link = table.Column<string>(type: "text", nullable: false),
-                    product_id = table.Column<Guid>(type: "uuid", nullable: true),
-                    created_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_images", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_images_products_product_id",
-                        column: x => x.product_id,
-                        principalTable: "products",
-                        principalColumn: "id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "orders",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
-                    order_status = table.Column<int>(type: "integer", nullable: false),
+                    status = table.Column<int>(type: "integer", nullable: false),
                     user_id = table.Column<Guid>(type: "uuid", nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
@@ -121,11 +102,6 @@ namespace WebApi.WebApi.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "ix_images_product_id",
-                table: "images",
-                column: "product_id");
-
-            migrationBuilder.CreateIndex(
                 name: "ix_order_products_product_id",
                 table: "order_products",
                 column: "product_id");
@@ -145,9 +121,6 @@ namespace WebApi.WebApi.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "images");
-
             migrationBuilder.DropTable(
                 name: "order_products");
 

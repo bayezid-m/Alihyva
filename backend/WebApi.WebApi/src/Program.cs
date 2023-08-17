@@ -7,6 +7,7 @@ using WebApi.Business.src.Abstractions;
 using WebApi.Business.src.Implementations;
 using WebApi.Business.src.Shared;
 using WebApi.Domain.src.Abstractions;
+using WebApi.WebApi.MiddleWare;
 using WebApi.WebApi.src.Database;
 using WebApi.WebApi.src.RepoImplementations;
 
@@ -26,8 +27,15 @@ internal class Program
         builder.Services
         .AddScoped<IUserRepo, UserRepo>()
         .AddScoped<IUserService, UserService>()
-        .AddScoped<IAuthService, AuthService>();
-        // Add services to the container.
+        .AddScoped<IAuthService, AuthService>()
+        .AddScoped<IProductRepo, ProductRepo>()
+        .AddScoped<IProductService, ProductService>()
+        .AddScoped<IOrderRepo, OrderRepo>()
+        .AddScoped<IOrderService, OrderService>()
+        .AddScoped<IOrderProductRepo, OrderProductRepo>()
+        .AddScoped<IOrderProductService, OrderProductService>();
+
+        builder.Services.AddSingleton<ErrorHandlerMW>();
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -50,7 +58,11 @@ internal class Program
         });
 
         //config the authentication
-        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
         .AddJwtBearer(options =>
         {
             options.TokenValidationParameters = new TokenValidationParameters
@@ -72,7 +84,11 @@ internal class Program
             app.UseSwaggerUI();
         }
 
+        app.UseCors();
+
         app.UseHttpsRedirection();
+
+        app.UseMiddleware<ErrorHandlerMW>();
 
         app.UseAuthentication();
 

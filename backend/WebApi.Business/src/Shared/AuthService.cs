@@ -25,6 +25,7 @@ namespace WebApi.Business.src.Shared
                 throw new Exception("Credentials do not match");
             }
             return GenerateToken(foundUserByEmail);
+
         }
 
         private string GenerateToken(User user)
@@ -45,7 +46,16 @@ namespace WebApi.Business.src.Shared
             };
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var token = jwtSecurityTokenHandler.CreateToken(securityTokenDescriptor);
-            return jwtSecurityTokenHandler.WriteToken(token);
+            var resultToken = jwtSecurityTokenHandler.WriteToken(token);
+            var userEmail = user.Email;
+            var data = new
+            {
+                Token = resultToken,
+                Email = userEmail
+            };
+
+            // Return the data as JSON
+            return data.ToString();
         }
     }
 }

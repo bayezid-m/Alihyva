@@ -1,3 +1,5 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Business.src.Abstractions;
@@ -11,9 +13,11 @@ namespace WebApi.Controller.src.Controllers
     public class UserController : CrudController<User, UserReadDto, UserCreateDto, UserUpdateDto>
     {
         private readonly IUserService _userService;
-        public UserController(IUserService baseService) : base(baseService)
+        private readonly IAuthService _authService;
+        public UserController(IUserService baseService, IAuthService authService) : base(baseService)
         {
             _userService = baseService;
+            _authService = authService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -29,6 +33,21 @@ namespace WebApi.Controller.src.Controllers
             return Ok(await _userService.GetAll(queryOptions));
         }
 
+        [Authorize]
+        [HttpGet("profile/{email}")]
+        //[HttpGet("Email/{email}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<UserReadDto>> GetUserByEmail(string email)
+        {
+            var user = await _userService.GetUserByEmailAsync(email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
+        }
+
+        
         [AllowAnonymous]
         public override async Task<ActionResult<UserReadDto>> GetOneById([FromRoute] Guid id)
         {

@@ -19,5 +19,10 @@ namespace WebApi.Business.src.Shared
            var hashedOriginal =  Encoding.UTF8.GetString(hmac.ComputeHash(Encoding.UTF8.GetBytes(originalPassword))) ;
            return hashedOriginal == hashedPassword;
         }
+
+        internal static void HashPassword(object password, out string hashedPassword, out byte[] salt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

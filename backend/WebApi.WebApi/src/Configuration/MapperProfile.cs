@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using WebApi.Business.src.Dtos;
 using WebApi.Domain.src.Entities;
@@ -15,11 +11,14 @@ namespace WebApi.WebApi.src.Configuration
             CreateMap<User, UserReadDto>();
             CreateMap<UserUpdateDto, User>();
             CreateMap<UserCreateDto, User>();
-            
+
             CreateMap<Product, ProductReadDto>();
             CreateMap<ProductCreateDto, Product>();
             CreateMap<ProductUpdateDto, Product>();
 
+            CreateMap<OrderProduct, OrderProductReadDto>();
+            CreateMap<OrderProductCreateDto, OrderProduct>();
+            CreateMap<OrderProductUpdateDto, OrderProduct>();
         }
     }
 }

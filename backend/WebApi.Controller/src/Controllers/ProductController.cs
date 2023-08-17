@@ -6,8 +6,10 @@ namespace WebApi.Controller.src.Controllers
 {
     public class ProductController : CrudController<Product, ProductReadDto, ProductCreateDto, ProductUpdateDto>
     {
-        public ProductController(IProductService baseService) : base(baseService)
+        private readonly IProductService _productService;
+        public ProductController(IProductService productService) : base(productService)
         {
+            _productService = productService;
         }
     }
 }

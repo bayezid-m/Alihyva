@@ -1,5 +1,6 @@
 using AutoMapper;
 using WebApi.Business.src.Abstractions;
+using WebApi.Business.src.Shared;
 using WebApi.Domain.src.Abstractions;
 using WebApi.Domain.src.Shared;
 
@@ -40,7 +41,7 @@ namespace WebApi.Business.src.Implementations
             var foundItem =await _baseRepo.GetOneById(id);
             if (foundItem is null)
             {
-                throw new Exception("Item not found");
+                throw CustomException.NotFoundException();
             }
             var updatedEntity = _baseRepo.UpdateOneById(_mapper.Map<T>(updated));
             return _mapper.Map<TReadDto>(updatedEntity);

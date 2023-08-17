@@ -14,7 +14,7 @@ namespace WebApi.Controller.src.Controllers
             _baseService = baseService;
           }
 
-          [HttpGet]
+          [HttpGet("{all}")]
           public virtual async Task<ActionResult<IEnumerable<TReadDto>>> GetAll([FromQuery] QueryOptions queryOptions)
           {
             var result =(await _baseService.GetAll(queryOptions)).ToArray();
@@ -35,7 +35,7 @@ namespace WebApi.Controller.src.Controllers
           }
 
           [HttpPatch("{id:Guid}")]
-          public async Task<ActionResult<TReadDto>> UpdateOneById([FromRoute] Guid id, [FromBody] TUpdateDto update)
+          public virtual async Task<ActionResult<TReadDto>> UpdateOneById([FromRoute] Guid id, [FromBody] TUpdateDto update)
           {
             var updatedObject = _baseService.UpdateOneById(id, update);
             return Ok(updatedObject);

@@ -13,8 +13,8 @@ using WebApi.WebApi.src.Database;
 namespace WebApi.WebApi.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230816182341_create")]
-    partial class create
+    [Migration("20230817205758_Create")]
+    partial class Create
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,39 +27,6 @@ namespace WebApi.WebApi.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "role", new[] { "admin", "user" });
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApi.Domain.src.Entities.Image", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("Link")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("link");
-
-                    b.Property<Guid?>("ProductId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("product_id");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("updated_at");
-
-                    b.HasKey("Id")
-                        .HasName("pk_images");
-
-                    b.HasIndex("ProductId")
-                        .HasDatabaseName("ix_images_product_id");
-
-                    b.ToTable("images", (string)null);
-                });
-
             modelBuilder.Entity("WebApi.Domain.src.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -71,9 +38,9 @@ namespace WebApi.WebApi.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
-                    b.Property<int>("OrderStatus")
+                    b.Property<int>("Status")
                         .HasColumnType("integer")
-                        .HasColumnName("order_status");
+                        .HasColumnName("status");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
@@ -156,6 +123,11 @@ namespace WebApi.WebApi.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
+                    b.Property<string[]>("url")
+                        .IsRequired()
+                        .HasColumnType("text[]")
+                        .HasColumnName("url");
+
                     b.HasKey("Id")
                         .HasName("pk_products");
 
@@ -221,14 +193,6 @@ namespace WebApi.WebApi.Migrations
                     b.ToTable("users", (string)null);
                 });
 
-            modelBuilder.Entity("WebApi.Domain.src.Entities.Image", b =>
-                {
-                    b.HasOne("WebApi.Domain.src.Entities.Product", null)
-                        .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .HasConstraintName("fk_images_products_product_id");
-                });
-
             modelBuilder.Entity("WebApi.Domain.src.Entities.Order", b =>
                 {
                     b.HasOne("WebApi.Domain.src.Entities.User", "User")
@@ -265,11 +229,6 @@ namespace WebApi.WebApi.Migrations
             modelBuilder.Entity("WebApi.Domain.src.Entities.Order", b =>
                 {
                     b.Navigation("OrderProducts");
-                });
-
-            modelBuilder.Entity("WebApi.Domain.src.Entities.Product", b =>
-                {
-                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

@@ -9557,6 +9557,7 @@
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "Swashbuckle.AspNetCore.Filters >= 7.0.8",
+      "System.IdentityModel.Tokens.Jwt >= 6.32.1",
       "WebApi.Controller >= 1.0.0"
     ]
   },
@@ -9643,6 +9644,10 @@
           "Swashbuckle.AspNetCore.Filters": {
             "target": "Package",
             "version": "[7.0.8, )"
+          },
+          "System.IdentityModel.Tokens.Jwt": {
+            "target": "Package",
+            "version": "[6.32.1, )"
           }
         },
         "imports": [

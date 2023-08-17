@@ -4,6 +4,7 @@ namespace WebApi.Domain.src.Abstractions
 {
     public interface IOrderProductRepo : IBaseRepo<OrderProduct>
     {
+         Task<IEnumerable<OrderProduct>> GetAllOrderProduct();
         
     }
 }

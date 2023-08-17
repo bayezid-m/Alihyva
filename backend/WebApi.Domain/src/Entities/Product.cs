@@ -6,6 +6,7 @@ namespace WebApi.Domain.src.Entities
         public string Description { get; set; }
         public int Inventory { get; set; }
         public float Price { get; set; }
-        public List<Image> Images { get; set; }
+       // public List<Image> Images { get; set; }
+        public string[] url { get; set; }
     }
 }

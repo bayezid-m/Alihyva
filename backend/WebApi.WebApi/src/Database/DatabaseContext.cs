@@ -12,7 +12,6 @@ namespace WebApi.WebApi.src.Database
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
-        public DbSet<Image> Images { get; set; }
 
         public DatabaseContext(DbContextOptions options, IConfiguration config) : base(options)
         {
