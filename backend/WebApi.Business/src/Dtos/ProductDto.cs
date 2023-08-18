@@ -9,6 +9,7 @@ namespace WebApi.Business.src.Dtos
     public string Description { get; set; }
     public float Price { get; set; }
     public int Inventory { get; set; }
+    public string Category { get; set; }
     public string[] url { get; set; }
   }
   public class ProductCreateDto
@@ -17,6 +18,7 @@ namespace WebApi.Business.src.Dtos
     public string Description { get; set; }
     public float Price { get; set; }
     public int Inventory { get; set; }
+    public string Category { get; set; }
     public string[] url { get; set; }
 
   }
@@ -26,6 +28,7 @@ namespace WebApi.Business.src.Dtos
     public string Description { get; set; }
     public float Price { get; set; }
     public int Inventory { get; set; }
+    public string Category { get; set; }
     public string[] url { get; set; }
   }
 }

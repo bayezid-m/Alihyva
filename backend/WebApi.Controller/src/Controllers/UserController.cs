@@ -33,10 +33,8 @@ namespace WebApi.Controller.src.Controllers
             return Ok(await _userService.GetAll(queryOptions));
         }
 
-        [Authorize]
         [HttpGet("profile/{email}")]
         //[HttpGet("Email/{email}")]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<UserReadDto>> GetUserByEmail(string email)
         {
             var user = await _userService.GetUserByEmailAsync(email);

@@ -44,18 +44,9 @@ namespace WebApi.Business.src.Shared
                 Subject = new ClaimsIdentity(claims),
                 SigningCredentials = signingCredentials
             };
-            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var token = jwtSecurityTokenHandler.CreateToken(securityTokenDescriptor);
-            var resultToken = jwtSecurityTokenHandler.WriteToken(token);
-            var userEmail = user.Email;
-            var data = new
-            {
-                Token = resultToken,
-                Email = userEmail
-            };
-
-            // Return the data as JSON
-            return data.ToString();
+            return jwtSecurityTokenHandler.WriteToken(token);
         }
     }
 }

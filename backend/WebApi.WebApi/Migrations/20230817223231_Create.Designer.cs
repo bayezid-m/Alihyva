@@ -13,7 +13,7 @@ using WebApi.WebApi.src.Database;
 namespace WebApi.WebApi.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230817205758_Create")]
+    [Migration("20230817223231_Create")]
     partial class Create
     {
         /// <inheritdoc />
@@ -96,6 +96,11 @@ namespace WebApi.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
                         .HasColumnName("id");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("category");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp without time zone")

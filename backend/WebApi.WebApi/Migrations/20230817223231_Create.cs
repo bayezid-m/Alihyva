@@ -24,6 +24,7 @@ namespace WebApi.WebApi.Migrations
                     description = table.Column<string>(type: "text", nullable: false),
                     inventory = table.Column<int>(type: "integer", nullable: false),
                     price = table.Column<float>(type: "real", nullable: false),
+                    category = table.Column<string>(type: "text", nullable: false),
                     url = table.Column<string[]>(type: "text[]", nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)

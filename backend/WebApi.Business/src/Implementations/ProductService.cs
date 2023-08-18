@@ -36,6 +36,7 @@ namespace WebApi.Business.src.Implementations
             foundItem.Description = updated.Description;
             foundItem.Price = updated.Price;
             foundItem.Inventory = updated.Inventory;
+            foundItem.Category = updated.Category;
 
             var updatedEntity = await _productRepo.UpdateOneById(foundItem);
 

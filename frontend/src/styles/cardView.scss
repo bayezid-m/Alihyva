@@ -1,0 +1,17 @@
+.card {  
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding:.5rem;
+    min-height:22em;
+    max-height: 22em;
+    margin-top: 1em;
+  
+    .card_button {
+        margin: 1em;
+        max-width: 10em;
+       
+    }
+}
