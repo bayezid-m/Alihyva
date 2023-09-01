@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a3YmWIsBtiicziCN1VH9hVUtVgDmX1UL0sQSHdCzEfYdxl/XVzm1YwNo2j0O7oJOAy8bnTmfXCzEK9uUUNjOPQ==",
+  "dgSpecHash": "Md6dUyNJiz69q8bHDm95iSB9SCWxpXvSQwqDpzYAEMMT4sNGWgkVEzC7IR06rKTfsMA6htkssOLEIsQK6p0EZw==",
   "success": true,
-  "projectFilePath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
+  "projectFilePath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bayez\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\bayez\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

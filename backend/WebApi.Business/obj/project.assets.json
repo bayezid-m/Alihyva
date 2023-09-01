@@ -745,8 +745,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
-              "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
+            "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
+              "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
             }
           }
         }

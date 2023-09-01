@@ -58,7 +58,6 @@ const Profile = () => {
       {!doEdit ?
         <div>
           <h1>{user?.firstName} {user?.lastName}</h1>
-          <h5>{user?.id}</h5>
           <h3>{user?.email}</h3>
           <p>{user?.password}</p>
           <p>{user?.role}</p>

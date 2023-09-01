@@ -29,7 +29,7 @@ export const fetchAllProducts = createAsyncThunk(
     "fetchAllProducts",
     async () => {
         try {
-            const result = await axios.get<Product[]>("http://localhost:5296/api/v1/products/all")
+            const result = await axios.get<Product[]>("https://alihyva.azurewebsites.net/api/v1/products/all")
             return result.data
         } catch (e) {
             const error = e as AxiosError
@@ -37,33 +37,14 @@ export const fetchAllProducts = createAsyncThunk(
         }
     }
 )
-// export const fetchRangeProduct = createAsyncThunk(
-//     "fetchRangeProduct",
-//     async ({min,max, categoryId}: { min?:number, max?:number, categoryId?:number}) => {
-//         try {
-//             console.log(categoryId);
-//             if(categoryId===100){
-//                 const result = await axios.get<Product[]>(`https://api.escuelajs.co/api/v1/products/?price_min=${min}&price_max=${max}`);
-//                 return result.data
-//             }
-//             else{
-//                 const result = await axios.get<Product[]>(`https://api.escuelajs.co/api/v1/products/?price_min=${min}&price_max=${max}&categoryId=${categoryId}`);
-//                 return result.data
-//             }
-           
-           
-//         } catch (e) {
-//             const error = e as AxiosError
-//             return error.message
-//         }
-//     }
-// )
+
+
 export const createNewProduct = createAsyncThunk(
     "createNewProduct",
     async ({ newProduct }: { newProduct: NewProduct }) => {
         try {
             console.log(newProduct);
-            const result = await axios.post<Product>("http://localhost:5296/api/v1/products", newProduct)
+            const result = await axios.post<Product>("https://alihyva.azurewebsites.net/api/v1/products", newProduct)
             return result.data
         } catch (e) {
             const error = e as AxiosError
@@ -78,7 +59,7 @@ export const updateSingleProduct = createAsyncThunk(
     'updateAProduct',
     async ({ productData, productId }: { productData: UpdateSingleProduct, productId: string }) => {
         try {
-            const result = await axios.patch<Product>(`http://localhost:5296/api/v1/products/${productId}`, productData);
+            const result = await axios.patch<Product>(`https://alihyva.azurewebsites.net/api/v1/products/${productId}`, productData);
             return result.data;
         } catch (e) {
             const error = e as AxiosError;
@@ -90,7 +71,7 @@ export const deleteSingleProduct = createAsyncThunk(
     'deleteAProduct',
     async ({ productId}: { productId: string}) => {
       try {
-        const result = await axios.delete(`http://localhost:5296/api/v1/products/${productId}`);
+        const result = await axios.delete(`https://alihyva.azurewebsites.net/api/v1/products/${productId}`);
         return result.data; 
       } catch (e) {
         const error = e as AxiosError;
@@ -195,21 +176,6 @@ const productsSlice = createSlice({
             .addCase(fetchFromCategory.rejected, (state, action) => {
                 state.error = "Couldn't fetch data"
             })
-            // .addCase(fetchRangeProduct.pending, (state, action) => {
-            //     state.loading = true
-            // })
-            // .addCase(fetchRangeProduct.rejected, (state, action) => {
-            //     state.loading = false
-            //     state.error = "Cannot perform this action. Please try again later"
-            // })
-            // .addCase(fetchRangeProduct.fulfilled, (state, action) => {
-            //     state.loading = false
-            //     if (typeof action.payload === "string") {
-            //         state.error = action.payload
-            //     } else {
-            //         state.products = action.payload
-            //     }
-            // })
     }
 })
 const productsReducer = productsSlice.reducer

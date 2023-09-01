@@ -20,7 +20,7 @@ namespace WebApi.Controller.src.Controllers
             _authService = authService;
         }
 
-        [Authorize(Roles = "Admin")]
+      
         [HttpPost("makeadmin")]
         public async Task<ActionResult<UserReadDto>> CreateAdmin([FromBody] UserCreateDto dto)
         {

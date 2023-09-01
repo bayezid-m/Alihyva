@@ -42,7 +42,7 @@ export const fetchAllUser = createAsyncThunk(
   'fetchAllUser',
   async () => {
     try {
-      const result = await axios.get<User[]>('https://api.escuelajs.co/api/v1/users');
+      const result = await axios.get<User[]>('https://alihyva.azurewebsites.net/api/v1/users');
       return result.data;
     } catch (e) {
       const error = e as AxiosError;
@@ -54,7 +54,7 @@ export const createSingleUser = createAsyncThunk(
   'createAUser',
   async ({ userData }: { userData: NewUser }) => {
     try {
-      const result = await axios.post<NewUser>("http://localhost:5296/api/v1/users", userData);
+      const result = await axios.post<NewUser>("https://alihyva.azurewebsites.net/api/v1/users", userData);
       return result.data; // The returned result will be inside action.payload
     } catch (e) {
       const error = e as AxiosError;
@@ -67,7 +67,7 @@ export const login = createAsyncThunk(
   "login",
   async ({ email, password }: UserCredential, { dispatch }) => {
     try {
-      const result = await axios.post<{ access_token: string }>("http://localhost:5296/api/v1/auth", { email, password })
+      const result = await axios.post<{ access_token: string }>("https://alihyva.azurewebsites.net/api/v1/auth", { email, password })
       const accessToken = result.data.access_token
       console.log("I am here");
       localStorage.setItem("token", accessToken)
@@ -84,7 +84,7 @@ export const authenticate = createAsyncThunk(
   "authenticate",
   async (email: string) => {
     try {
-      const authentication = await axios.get<User>(`http://localhost:5296/api/v1/users/profile/${email}`,
+      const authentication = await axios.get<User>(`https://alihyva.azurewebsites.net/api/v1/users/profile/${email}`,
         // {
         //   headers: {
         //     "Authorization": `Bearer ${accessToken}`
@@ -103,7 +103,7 @@ export const updateUser = createAsyncThunk(
   'updateUser',
   async ({ userData, userId }: { userData: User, userId: number }) => {
     try {
-      const result = await axios.put<User>(`https://api.escuelajs.co/api/v1/users/${userId}`, userData);
+      const result = await axios.put<User>(`https://alihyva.azurewebsites.net/api/v1/users/${userId}`, userData);
       return result.data; // The returned result will be inside action.payload
     } catch (e) {
       const error = e as AxiosError;

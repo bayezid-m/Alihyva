@@ -1,7 +1,7 @@
 ## Description
 
 This is a fullstack project containig both client side and server side. The application is an ecommerce site 
-where the server side has been made with ASP.Net Core, client side with ReactJS and PostgreSQL as database.
+where the server side has been made with ASP.Net Core, client side with ReactJS and  Azur PostgreSQL as database.
 The server side provides the rest APIs and also connect the database. The frontend as well as client side handles 
 the functions of an ecommrce side. 
 
@@ -18,15 +18,17 @@ the functions of an ecommrce side.
 9. Custom hooks
 10. Components
 11. Pagination
+12. Netlify
 
 ## Server side technology
 1. ASP.net core
 2. C#
 3. Clean architecture
 4. JWT authentication
+5. Azure Deployment
 
 ## Database technology
-1. PostgreSQL
+1. Azure postgresql
 
 ## Feature
 1. User authentication
@@ -40,7 +42,16 @@ the functions of an ecommrce side.
 
 ## Deployment
 
-Live demo -> "https://alihyva.netlify.app/"
+Client side/ main demo -> https://alihyvareturns.netlify.app
+Serversite -> https://alihyva.azurewebsites.net/
+
+## Some users to test
+## admin
+admin@mail.com
+admin123
+## user
+userone@mail.com
+user123
 
 ## Clean architecture
 

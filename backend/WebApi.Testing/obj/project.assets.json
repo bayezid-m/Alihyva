@@ -10380,11 +10380,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\WebApi.Testing.csproj",
+      "projectUniqueName": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\WebApi.Testing.csproj",
       "projectName": "WebApi.Testing",
-      "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\WebApi.Testing.csproj",
+      "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\WebApi.Testing.csproj",
       "packagesPath": "C:\\Users\\bayez\\.nuget\\packages\\",
-      "outputPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\obj\\",
+      "outputPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Testing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bayez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -10402,11 +10402,11 @@
             "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj": {
               "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Business\\WebApi.Business.csproj"
             },
-            "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
-              "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
+            "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj": {
+              "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj"
             },
-            "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj": {
-              "projectPath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj"
+            "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj": {
+              "projectPath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.WebApi\\WebApi.WebApi.csproj"
             }
           }
         }

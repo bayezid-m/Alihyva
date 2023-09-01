@@ -13,8 +13,8 @@ using WebApi.WebApi.src.Database;
 namespace WebApi.WebApi.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230817223231_Create")]
-    partial class Create
+    [Migration("20230831234021_makeadmin")]
+    partial class makeadmin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

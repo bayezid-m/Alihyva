@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         setDesciption(productsInfo?.description)
     }
     const getData = async () => {
-        const response = await axios.get<Product>(`http://localhost:5296/api/v1/products/${id}`)
+        const response = await axios.get<Product>(`https://alihyva.azurewebsites.net/api/v1/products/${id}`)
         setProductInfo(response.data)
        
         setTitle(response.data?.title)

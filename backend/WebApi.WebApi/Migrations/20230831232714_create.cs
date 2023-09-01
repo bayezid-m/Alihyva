@@ -7,7 +7,7 @@ using WebApi.Domain.src.Entities;
 namespace WebApi.WebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Create : Migration
+    public partial class create : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

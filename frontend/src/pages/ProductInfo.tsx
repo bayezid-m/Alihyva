@@ -27,7 +27,7 @@ const ProductInfo = () => {
     let CartId:number = cart.length+1
     useEffect(() => {
         axios
-            .get<Product>(`http://localhost:5296/api/v1/products/${id}`)
+            .get<Product>(`https://alihyva.azurewebsites.net/api/v1/products/${id}`)
             .then((response: AxiosResponse) => setProductInfo(response.data))
     }, [])
 

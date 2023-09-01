@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l+Ako0I24JXPMvzDqS49lgdxSOfSmIkZXETWxC+b9/SmM8SQpblxYj81bNKr3ma63NC7UA/xP0DTdilH/pq9nQ==",
+  "dgSpecHash": "9Xf572ZqnI8c6VEwvA+LvCNk64Y7EcoTjikgtguaMr928nbcFe6mr8O26WPwgFqXY8bYm9OK42mJF6PvXdcxgw==",
   "success": true,
-  "projectFilePath": "E:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
+  "projectFilePath": "e:\\Integrify\\Backend\\fs15_Fullstack\\backend\\WebApi.Domain\\WebApi.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
